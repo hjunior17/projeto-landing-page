@@ -14,8 +14,8 @@ function showImages () {
 }
 
 arrowNext.addEventListener('click', function() {
-    const totalInImages = imagesPanel.length -1;
-    if (imageCurrent === totalInImages) {
+    const totalImages = imagesPanel.length -1;
+    if (imageCurrent === totalImages) {
         return;
     }
 
