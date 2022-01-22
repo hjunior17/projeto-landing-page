@@ -1,0 +1,244 @@
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.logo .image {
+    width: 100px;
+}
+
+.logo .title {
+    margin-left: 7px;
+    font-size: 17px;
+    transition: 0.3s ease-in-out;
+    font-weight: 800;
+}
+
+.logo .title:hover {
+    color: #1ED760;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    max-width: 1170px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.header .navegation .menu {
+    display: flex;
+}
+
+.header .navegation .menu .item {
+    margin: 10px;
+}
+
+.header .navegation .menu .item a {
+    padding: 15px;
+    transition: 0.3s ease-in-out;
+    border-radius: 7px; /* add for me */
+}
+
+.header .navegation .menu .item a:hover {
+    background-color: #1ED760;
+    color: white;
+}
+
+@media(max-width: 624px) {
+    .header {
+        justify-content: center;
+    }
+
+    .header .logo {
+        margin-bottom: 30px;
+    }
+
+    .header .menu .item a {
+        font-size: calc(0.6em + 1vw)
+    }
+}
+
+/* PANEL */
+.content-main .panels {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    position: relative;
+}
+
+.content-main .panels .images-panel {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(70%);
+
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+
+.content-main .panels .project1 {
+    background-image: url('../images/painel1.jpg');
+}
+
+.content-main .panels .project2 {
+    background-image: url('../images/painel2.jpg');
+}
+
+.content-main .panels .project3 {
+    background-image: url('../images/painel3.jpg');
+}
+
+.content-main .panels .images-panel.show {
+    opacity: 1;
+}
+
+.content-main .panels .title {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: calc(1em + 1vw);
+}
+
+.content-main .panels .arrow {
+    background-image: url('../images/seta.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    text-indent: 100%;
+    overflow: hidden;
+}
+
+.content-main .panels .arrow.button-previous {
+    left: 20px;
+    transform: rotateY(180deg);
+}
+
+.content-main .panels .arrow.button-next {
+    right: 20px;
+}
+
+@media(max-width: 900px) {
+    .content-main .panels {
+        height: 500px;
+    }
+}
+
+/* ABOUT */
+.about {
+    background-color: #2941AB;
+}
+
+.about .content {
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.about .content .informations {
+    width: 48%;
+}
+
+.about .content .image {
+    width: 60%;
+}
+
+.about .content .informations .title {
+    font-size: 50px;
+    color: #1ED760;
+    margin-bottom: 20px;
+}
+
+.about .content .informations .text {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fff;
+    font-weight: 400;
+}
+
+@media(max-width: 1200px) {
+    .about .content {
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 30px;
+    }
+
+    .about .content .image {
+        display: none;
+    }
+
+    .about .content .informations {
+       width: 100%; 
+    }
+}
+
+/* FOOTER */
+.footer {
+    padding: 80px 0 20px 0;
+}
+
+.footer .navegation {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer .social-media {
+    display: flex;
+}
+
+.footer .social-media a {
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+    font-size: 30px;
+    border: 2px solid #111;
+    border-radius: 50%;
+    padding: 15px;
+    width: 65px;
+}
+
+.footer .social-media a:hover {
+    border-color: #1ED760;
+    transition: 0.3s ease-in-out;
+}
+
+.footer .navegation .logo .image {
+    width: 100px;
+}
+
+.footer .copyright {
+    margin-top: 70px;
+    text-align: center;
+}
+
+@media(max-width: 940px) {
+    .footer .navegation {
+        justify-content: center;
+    }
+
+    .footer .navegation .logo {
+        margin-bottom: 30px;
+    }
+
+    .footer .navegation .logo,
+    .footer .navegation .social-media {
+        width: 100%;
+        justify-content: center;
+    }
+}
